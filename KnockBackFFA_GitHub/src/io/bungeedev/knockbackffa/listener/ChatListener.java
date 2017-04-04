@@ -47,10 +47,10 @@ public class ChatListener implements Listener {
     }
     @EventHandler
     public void onServerChat(AsyncPlayerChatEvent e) {
-        if((Main.getKBF().BungeeCord) && (Main.getKBF().AllowServerChat)) {
+        if((Main.getKBF().BungeeCord == true) && (Main.getKBF().AllowServerChat == false)) {
             e.setCancelled(true);
             e.getPlayer().sendMessage(Main.getKBF().Prefix + "§cDer ServerChat wurde auf dem Server deativiert!");
-        } else if((!Main.getKBF().BungeeCord) && (Main.getKBF().AllowServerChat)) {
+        } else if((!Main.getKBF().BungeeCord == false) && (Main.getKBF().AllowServerChat == false)) {
             Player p = e.getPlayer();
             if(p.getWorld().getName().contains(Main.getKBF().LevelName)) {
                 e.setCancelled(true);

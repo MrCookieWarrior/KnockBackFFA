@@ -81,7 +81,7 @@ public class MySQL
     if (isConnected()) {
       try
       {
-        con.createStatement().executeUpdate("CREATE TABLE IF NOT EXISTS KnockBackFFA (UUID VARCHAR(100), NAME VARCHAR(100), KILLS int, DEATHS int)");
+        con.createStatement().executeUpdate("CREATE TABLE IF NOT EXISTS EasyServerManager (UUID VARCHAR(100), NAME VARCHAR(100), KILLS int, DEATHS int)");
         
         Bukkit.getConsoleSender().sendMessage("§7[§3MySQL§7] EasyServerManager Table created");
       }

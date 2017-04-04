@@ -4,16 +4,13 @@ import io.bungeedev.knockbackffa.mysql.MySQL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * @author BungeeDev
- **/
 public class RoundStats
 {
   public static boolean playerExists(String uuid)
   {
     try
     {
-      ResultSet rs = MySQL.getResult("SELECT * FROM KnocBackFFA WHERE UUID='" + uuid + "'");
+      ResultSet rs = MySQL.getResult("SELECT * FROM EasyServerManager WHERE UUID='" + uuid + "'");
       if (rs.next()) {
         return rs.getString("UUID") != null;
       }
@@ -29,7 +26,7 @@ public class RoundStats
   public static void createPlayer(String uuid, String name)
   {
     if (!playerExists(uuid)) {
-      MySQL.update("INSERT INTO KnocBackFFA (UUID, NAME, KILLS, DEATHS) VALUES ('" + uuid + "', '" + name + "', '0', '0');");
+      MySQL.update("INSERT INTO EasyServerManager (UUID, NAME, KILLS, DEATHS) VALUES ('" + uuid + "', '" + name + "', '0', '0');");
     }
   }
   
@@ -40,7 +37,7 @@ public class RoundStats
     {
       try
       {
-        ResultSet rs = MySQL.getResult("SELECT * FROM KnocBackFFA WHERE UUID='" + uuid + "'");
+        ResultSet rs = MySQL.getResult("SELECT * FROM EasyServerManager WHERE UUID='" + uuid + "'");
         if (rs.next()) {
           Integer.valueOf(rs.getInt("KILLS"));
         }
@@ -66,7 +63,7 @@ public class RoundStats
     {
       try
       {
-        ResultSet rs = MySQL.getResult("SELECT * FROM KnocBackFFA WHERE UUID='" + uuid + "'");
+        ResultSet rs = MySQL.getResult("SELECT * FROM EasyServerManager WHERE UUID='" + uuid + "'");
         if (rs.next()) {
           Integer.valueOf(rs.getInt("DEATHS"));
         }
@@ -89,7 +86,7 @@ public class RoundStats
   {
     if (playerExists(uuid))
     {
-      MySQL.update("UPDATE KnocBackFFA SET KILLS='" + kills + "' WHERE UUID='" + uuid + "'");
+      MySQL.update("UPDATE EasyServerManager SET KILLS='" + kills + "' WHERE UUID='" + uuid + "'");
     }
     else
     {
@@ -102,7 +99,7 @@ public class RoundStats
   {
     if (playerExists(uuid))
     {
-      MySQL.update("UPDATE KnocBackFFA SET DEATHS='" + deaths + "' WHERE UUID='" + uuid + "'");
+      MySQL.update("UPDATE EasyServerManager SET DEATHS='" + deaths + "' WHERE UUID='" + uuid + "'");
     }
     else
     {
