@@ -30,6 +30,7 @@ public class Main extends JavaPlugin {
         MySQL.createTableRound();
         registerEvents();
         registerCommands();
+        pluginMessage();
     }
     public void registerEvents() {
         PluginManager pm = Bukkit.getPluginManager();
@@ -40,9 +41,22 @@ public class Main extends JavaPlugin {
     public void registerCommands() {
         
     }
+    public void pluginMessage() {
+        Bukkit.getConsoleSender().sendMessage("§l");
+        Bukkit.getConsoleSender().sendMessage("§9---------- §3KnockBackFFA §9----------");
+        Bukkit.getConsoleSender().sendMessage("§l ");
+        Bukkit.getConsoleSender().sendMessage("§7Version: §e" + Main.Instance.getDescription().getVersion());
+        Bukkit.getConsoleSender().sendMessage("§7TeamSpeak: §eCeriox.de");
+        Bukkit.getConsoleSender().sendMessage("§7YouTube: §eBungeeDev");
+        Bukkit.getConsoleSender().sendMessage("§7Website: §ewww.ceriox.de");
+        Bukkit.getConsoleSender().sendMessage("§7Skype: §eSeelenfresser8");
+        Bukkit.getConsoleSender().sendMessage("§7Minecraft-Name §eBungeeDev");
+        Bukkit.getConsoleSender().sendMessage("§9----------------------------------");
+    }
     @Override
     public void onDisable() {
-        
+        MySQL.close();
+        pluginMessage();
     }
     public static Main getKBF() {
         return Instance;
