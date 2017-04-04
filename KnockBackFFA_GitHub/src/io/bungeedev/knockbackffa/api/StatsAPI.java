@@ -5,6 +5,9 @@ import java.io.PrintStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author BungeeDev
+ **/
 public class StatsAPI
 {
   public static boolean playerExists(String uuid)

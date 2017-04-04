@@ -59,4 +59,17 @@ public class Main extends JavaPlugin {
     public String Host = ChatColor.translateAlternateColorCodes('&', getConfig().getString("MySQL.Host"));
     public String Datenbank = ChatColor.translateAlternateColorCodes('&', getConfig().getString("MySQL.Datenbank"));
     public String Port = ChatColor.translateAlternateColorCodes('&', getConfig().getString("MySQL.Port"));
+    public String Owner = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Owner"));
+    public String Admin = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Admin"));
+    public String SrDev = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.SrDeveloper"));
+    public String Dev = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Developer"));
+    public String SrMod = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.SrModerator"));
+    public String Mod = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Moderator"));
+    public String SrSupp = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.SrSupporter"));
+    public String Supp = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Supporter"));
+    public String SrBuilder = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.SrBuilder"));
+    public String Builder = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Builder"));
+    public String YouTuber = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.YouTuber"));
+    public String Premium = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Premium"));
+    public String Spieler = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Group-Prefix.Player"));
 }

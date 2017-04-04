@@ -4,6 +4,9 @@ import io.bungeedev.knockbackffa.mysql.MySQL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author BungeeDev
+ **/
 public class RoundStats
 {
   public static boolean playerExists(String uuid)

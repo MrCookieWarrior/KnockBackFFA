@@ -20,6 +20,21 @@ Messages:
     JoinMessage: "&a%player% &eJoined the game!"
     QuitMessage: "&c%player% &4Left the game!"
 ##############################################################
+Group-Prefix:
+    Owner: "&4Owner &7| "
+    Admin: "&4Admin &7| "
+    SrDeveloper: "&bSrDev &7| "
+    Developer: "&bDev &7| "
+    SrModerator: "&cSrMod &7| "
+    Moderator: "&cMod &7| "
+    SrSupporter: "&3SrSupp &7| "
+    Supporter: "&9Supp &7| "
+    SrBuilder: "&aSrBuilder &7| "
+    Builder: "&2Builder &7| "
+    YouTuber: "&5"
+    Premium: "&6"
+    Player: "&7"
+##############################################################
 Title:
     Header: ""
     Footer: ""
