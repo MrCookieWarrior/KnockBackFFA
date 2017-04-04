@@ -33,9 +33,9 @@ Scoreboard:
     Title: ""
 ##############################################################
 MySQL:
-    username: "root"
-    password: "secret"
-    host: "localhost"
-    datenbank: "knockbackffa"
-    port: 3306
+    Username: "root"
+    Password: "secret"
+    Host: "localhost"
+    Datenbank: "knockbackffa"
+    Port: 3306
 ##############################################################
