@@ -1,4 +1,4 @@
 name: KnockBackFFA
 author: BungeeDev
-version: 0.0.1.5
-mein: io.bungeedev.knockbackffa.main.Main
+version: 1.0
+main: io.bungeedev.knockbackffa.main.Main
