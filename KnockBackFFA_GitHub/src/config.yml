@@ -15,6 +15,7 @@ KnockBackFFA:
     AllowBlockBreak: false
     AllowBlockPlace: false
     MaxPlayers: 25
+    AllowServerChat: true
 ##############################################################
 Messages:
     JoinMessage: "&a%player% &eJoined the game!"

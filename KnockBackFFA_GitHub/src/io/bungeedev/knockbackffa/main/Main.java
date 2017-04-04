@@ -1,8 +1,13 @@
 package io.bungeedev.knockbackffa.main;
 
+import io.bungeedev.knockbackffa.listener.BlockListener;
+import io.bungeedev.knockbackffa.listener.ChatListener;
+import io.bungeedev.knockbackffa.listener.PlayerListener;
 import io.bungeedev.knockbackffa.mysql.MySQL;
 import java.io.File;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -28,7 +33,10 @@ public class Main extends JavaPlugin {
         registerCommands();
     }
     public void registerEvents() {
-        
+        PluginManager pm = Bukkit.getPluginManager();
+        pm.registerEvents(new PlayerListener(), this);
+        pm.registerEvents(new ChatListener(), this);
+        pm.registerEvents(new BlockListener(), this);
     }
     public void registerCommands() {
         
@@ -41,11 +49,13 @@ public class Main extends JavaPlugin {
         return Instance;
     }
     public String Prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("KnockBackFFA.Prefix"));
+    public String LevelName = ChatColor.translateAlternateColorCodes('&', getConfig().getString("KnockBackFFA.LevelName"));
     public boolean AllowJoinMessage = getConfig().getBoolean("KnockBackFFA.AllowJoinMessage");
     public boolean AllowQuitMessage = getConfig().getBoolean("KnockBackFFA.AllowQuitMessage");
     public boolean BungeeCord = getConfig().getBoolean("KnockBackFFA.BungeeCord");
     public boolean AllowBlockBreak = getConfig().getBoolean("KnockBackFFA.AllowBlockBreak");
     public boolean AllowBlockPlace = getConfig().getBoolean("KnockBackFFA.AllowBlockPlace");
+    public boolean AllowServerChat = getConfig().getBoolean("KnockBackFFA.AllowServerChat");
     public int MaxPlayers = getConfig().getInt("KnockBackFFA.MaxPlayers");
     public String JoinMessage = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.JoinMessage"));
     public String QuitMessage = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.QuitMessage"));
