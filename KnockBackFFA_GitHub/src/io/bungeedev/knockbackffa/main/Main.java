@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package io.bungeedev.knockbackffa.main;
 
 import org.bukkit.ChatColor;
@@ -41,8 +36,7 @@ public class Main extends JavaPlugin {
     public boolean BungeeCord = getConfig().getBoolean("KnockBackFFA.BungeeCord");
     public boolean AllowBlockBreak = getConfig().getBoolean("KnockBackFFA.AllowBlockBreak");
     public boolean AllowBlockPlace = getConfig().getBoolean("KnockBackFFA.AllowBlockPlace");
-    public boolean EnableBanSystem = getConfig().getBoolean("KnockBackFFA.EnableBanSystem");
-    public boolean EnableMuteSystem = getConfig().getBoolean("KnockBackFFA.EnableMuteSystem");
+    public int MaxPlayers = getConfig().getInt("KnockBackFFA.MaxPlayers");
     public String JoinMessage = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.JoinMessage"));
     public String QuitMessage = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.QuitMessage"));
     public String TitleHeader = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Title.Header"));

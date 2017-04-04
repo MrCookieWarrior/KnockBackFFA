@@ -14,8 +14,7 @@ KnockBackFFA:
     LevelName: "world"
     AllowBlockBreak: false
     AllowBlockPlace: false
-    EnableBanSystem: true
-    EnableMuteSystem: true
+    MaxPlayers: 25
 ##############################################################
 Messages:
     JoinMessage: "&a%player% &eJoined the game!"
