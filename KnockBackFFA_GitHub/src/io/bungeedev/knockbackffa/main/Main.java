@@ -1,5 +1,7 @@
 package io.bungeedev.knockbackffa.main;
 
+import io.bungeedev.knockbackffa.mysql.MySQL;
+import java.io.File;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,6 +16,14 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         Instance = this;
+        if (!new File(getDataFolder(), "config.yml").exists()) {
+        saveResource("config.yml", true);
+    }
+        MySQL.connect();
+        MySQL.createTable();
+        MySQL.createTableBanSystem();
+        MySQL.createTableMuteSystem();
+        MySQL.createTableRound();
         registerEvents();
         registerCommands();
     }
