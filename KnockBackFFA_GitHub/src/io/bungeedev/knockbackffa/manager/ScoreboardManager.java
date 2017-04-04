@@ -41,7 +41,7 @@ public class ScoreboardManager {
         obj.getScore("§7Deine Tode:").setScore(4);
         obj.getScore("§l  ").setScore(2);
         obj.getScore("§7TeamSpeak:").setScore(1);
-        obj.getScore("").setScore(0);
+        obj.getScore(Main.getKBF().ScoreTS).setScore(0);
         
         p.setScoreboard(board);
         

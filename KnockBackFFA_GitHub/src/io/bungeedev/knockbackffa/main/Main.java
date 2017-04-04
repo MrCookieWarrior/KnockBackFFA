@@ -11,9 +11,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
- *
  * @author BungeeDev
- */
+ **/
 public class Main extends JavaPlugin {
  
     public static Main Instance;
@@ -64,6 +63,7 @@ public class Main extends JavaPlugin {
     public String TabHeader = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Tablist.Header"));
     public String TabFooter = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Tablist.Footer"));
     public String ScoreTitle = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Scoreboard.Title"));
+    public String ScoreTS = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Scoreboard.ScoreTS"));
     public String User = ChatColor.translateAlternateColorCodes('&', getConfig().getString("MySQL.Username"));
     public String Password = ChatColor.translateAlternateColorCodes('&', getConfig().getString("MySQL.Password"));
     public String Host = ChatColor.translateAlternateColorCodes('&', getConfig().getString("MySQL.Host"));

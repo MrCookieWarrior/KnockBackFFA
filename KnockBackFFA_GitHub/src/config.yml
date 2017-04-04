@@ -45,7 +45,8 @@ Tablist:
     Footer: ""
 ##############################################################
 Scoreboard:
-    Title: ""
+    Title: "test"
+    ScoreTS: "&6YourServer.net"
 ##############################################################
 MySQL:
     Username: "root"
