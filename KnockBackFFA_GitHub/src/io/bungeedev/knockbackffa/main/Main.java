@@ -5,6 +5,7 @@
  */
 package io.bungeedev.knockbackffa.main;
 
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -33,5 +34,6 @@ public class Main extends JavaPlugin {
     }
     public static Main getKBF() {
         return Instance;
-    }    
+    }
+    public String Prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("KnockBackFFA.Prefix"));
 }

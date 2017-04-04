@@ -1,0 +1,41 @@
+##############################################################
+# KnockBackFFA
+# Created by BungeeDev aka MrCookieWarrior
+# Development begin on 01.04.17
+# The support of the developer is unfortunately only in German
+# Support on TeamSpeak ceriox.de
+# Minecraft version tested on 1.8 and 1.9
+##############################################################
+KnockBackFFA:
+    Prefix: "&8[&3KnockBackFFA&8] &f"
+    AllowJoinMessage: true
+    AllowQuitMessage: true
+    BungeeCord: false
+    LevelName: "world"
+    AllowBlockBreak: false
+    AllowBlockPlace: false
+    EnableBanSystem: true
+    EnableMuteSystem: true
+##############################################################
+Messages:
+    JoinMessage: "&a%player% &eJoined the game!"
+    QuitMessage: "&c%player% &4Left the game!"
+##############################################################
+Title:
+    Header: ""
+    Footer: ""
+##############################################################
+Tablis:
+    Header: ""
+    Footer: ""
+##############################################################
+Scoreboard:
+    Title: ""
+##############################################################
+MySQL:
+    username: "root"
+    password: "secret"
+    host: "localhost"
+    datenbank: "knockbackffa"
+    port: 3306
+##############################################################
