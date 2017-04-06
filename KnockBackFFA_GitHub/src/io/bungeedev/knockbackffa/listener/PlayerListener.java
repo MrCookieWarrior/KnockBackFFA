@@ -44,7 +44,7 @@ public class PlayerListener implements Listener {
                 }
             }
         }.runTaskLater(Main.getKBF(), 1);
-        p.getInventory().setItem(0, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
+        p.getInventory().setItem(Main.getKBF().StickItemSlot, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
         p.getInventory().setItem(Main.getKBF().BowItemSlot, ItemAPI.createjoinItem(Material.BOW, 1, 0, "§3KnockBackBow", Enchantment.ARROW_KNOCKBACK, 1));
         if(Main.getKBF().AllowJoinMessage == true) {
             String join = Main.getKBF().JoinMessage;
@@ -66,7 +66,7 @@ public class PlayerListener implements Listener {
       Bukkit.broadcastMessage(Main.getKBF().Prefix + "§3Der §e" + opfer.getDisplayName() + " §3ist gestorben!");
       ScoreboardManager.setScoreboard(opfer);
       ScoreboardManager.UpdateScoreboard(opfer);
-      opfer.getInventory().setItem(0, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
+      opfer.getInventory().setItem(Main.getKBF().StickItemSlot, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
       opfer.getInventory().setItem(Main.getKBF().BowItemSlot, ItemAPI.createjoinItem(Material.BOW, 1, 0, "§3KnockBackBow", Enchantment.ARROW_KNOCKBACK, 1));
     } else {
       Bukkit.broadcastMessage(Main.getKBF().Prefix + "§3Der §e" + opfer.getDisplayName() + " §3wurde von dem §a" + killer.getDisplayName() + " §3getötet!");
@@ -80,7 +80,7 @@ public class PlayerListener implements Listener {
       opfer.getInventory().clear();
       ScoreboardManager.setScoreboard(opfer);
       ScoreboardManager.UpdateScoreboard(opfer);
-      opfer.getInventory().setItem(0, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
+      opfer.getInventory().setItem(Main.getKBF().StickItemSlot, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
       opfer.getInventory().setItem(Main.getKBF().BowItemSlot, ItemAPI.createjoinItem(Material.BOW, 1, 0, "§3KnockBackBow", Enchantment.ARROW_KNOCKBACK, 1));
       ScoreboardManager.setScoreboard(killer);
       ScoreboardManager.UpdateScoreboard(killer);
