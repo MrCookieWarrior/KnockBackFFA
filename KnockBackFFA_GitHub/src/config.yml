@@ -18,6 +18,7 @@ KnockBackFFA:
     AllowBlockPlace: false
     MaxPlayers: 25
     AllowServerChat: true
+    BowItemSlot: 4
 ##############################################################
 Messages:
     JoinMessage: "&a%player% &eJoined the game!"

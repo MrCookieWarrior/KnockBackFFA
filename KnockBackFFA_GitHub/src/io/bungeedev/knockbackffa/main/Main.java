@@ -70,6 +70,7 @@ public class Main extends JavaPlugin {
     public boolean AllowBlockPlace = getConfig().getBoolean("KnockBackFFA.AllowBlockPlace");
     public boolean AllowServerChat = getConfig().getBoolean("KnockBackFFA.AllowServerChat");
     public int MaxPlayers = getConfig().getInt("KnockBackFFA.MaxPlayers");
+    public int BowItemSlot = getConfig().getInt("KnockBackFFA.BowItemSlot");
     public String JoinMessage = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.JoinMessage"));
     public String QuitMessage = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Messages.QuitMessage"));
     public String TitleHeader = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Title.Header"));

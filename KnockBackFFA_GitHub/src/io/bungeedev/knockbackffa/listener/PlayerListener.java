@@ -29,11 +29,12 @@ public class PlayerListener implements Listener {
     }    
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        if(!RoundStats.playerExists(e.getPlayer().getUniqueId().toString())) {
-            RoundStats.createPlayer(e.getPlayer().getUniqueId().toString(), e.getPlayer().getName());
+        Player p = e.getPlayer();
+        if(!RoundStats.playerExists(p.getUniqueId().toString())) {
+            RoundStats.createPlayer(p.getUniqueId().toString(), e.getPlayer().getName());
         }
-        RoundStats.setDeaths(e.getPlayer().getUniqueId().toString(), e.getPlayer().getName(), 0);
-        RoundStats.setKills(e.getPlayer().getUniqueId().toString(), e.getPlayer().getName(), 0);
+        RoundStats.setDeaths(p.getUniqueId().toString(), e.getPlayer().getName(), 0);
+        RoundStats.setKills(p.getUniqueId().toString(), e.getPlayer().getName(), 0);
         new BukkitRunnable() {
             @Override
             public void run() {
@@ -43,7 +44,8 @@ public class PlayerListener implements Listener {
                 }
             }
         }.runTaskLater(Main.getKBF(), 1);
-        e.getPlayer().getInventory().setItem(0, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
+        p.getInventory().setItem(0, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
+        p.getInventory().setItem(Main.getKBF().BowItemSlot, ItemAPI.createjoinItem(Material.BOW, 1, 0, "§3KnockBackBow", Enchantment.ARROW_KNOCKBACK, 1));
         if(Main.getKBF().AllowJoinMessage == true) {
             String join = Main.getKBF().JoinMessage;
             join = join.replaceFirst("%player%", e.getPlayer().getDisplayName());
@@ -65,6 +67,7 @@ public class PlayerListener implements Listener {
       ScoreboardManager.setScoreboard(opfer);
       ScoreboardManager.UpdateScoreboard(opfer);
       opfer.getInventory().setItem(0, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
+      opfer.getInventory().setItem(Main.getKBF().BowItemSlot, ItemAPI.createjoinItem(Material.BOW, 1, 0, "§3KnockBackBow", Enchantment.ARROW_KNOCKBACK, 1));
     } else {
       Bukkit.broadcastMessage(Main.getKBF().Prefix + "§3Der §e" + opfer.getDisplayName() + " §3wurde von dem §a" + killer.getDisplayName() + " §3getötet!");
       e.setDeathMessage(null);
@@ -78,6 +81,7 @@ public class PlayerListener implements Listener {
       ScoreboardManager.setScoreboard(opfer);
       ScoreboardManager.UpdateScoreboard(opfer);
       opfer.getInventory().setItem(0, ItemAPI.createjoinItem(Material.STICK, 1, 0, "§3KnockBackStick", Enchantment.KNOCKBACK, 1));
+      opfer.getInventory().setItem(Main.getKBF().BowItemSlot, ItemAPI.createjoinItem(Material.BOW, 1, 0, "§3KnockBackBow", Enchantment.ARROW_KNOCKBACK, 1));
       ScoreboardManager.setScoreboard(killer);
       ScoreboardManager.UpdateScoreboard(killer);
     }
